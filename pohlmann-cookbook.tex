@@ -1,0 +1,47 @@
+\documentclass{admin/recipe_book}
+
+\usepackage[style=mla,sorting=none]{biblatex}
+\addbibresource{pohlmann-cookbook.bib}
+
+\usepackage[acronym,toc]{glossaries}
+\makeglossaries
+\include{admin/acronyms}
+\usepackage{xcolor}
+\renewcommand*{\glstextformat}[1]{\textcolor{black}{#1}} % disabling the blue color of glossaries
+
+\DeclareRobustCommand{\degF}{\ensuremath{^{\circ}\mathrm{F}}}
+
+\usepackage{hyperref}    % must be the last package
+\hypersetup{%
+    pdfauthor            = {Liam Pohlmann},
+    pdftitle             = {Pohlmann Cookbook},
+    pdfsubject           = {Recipes},
+    % pdfkeywords          = {example, recipes, cookbook, xcookybooky},
+    pdfstartview         = {FitV},
+    pdfview              = {FitH},
+    pdfpagemode          = {UseNone}, % Options; UseNone, UseOutlines
+    bookmarksopen        = {true},
+    % pdfpagetransition    = {Glitter},
+    colorlinks           = {true},
+    linkcolor            = {black},
+    urlcolor             = {blue},
+    citecolor            = {black},
+    filecolor            = {black},
+}
+
+\usepackage[capitalize]{cleveref}
+
+\hbadness=10000	% Ignore underfull boxes
+
+\title{Pohlmann Cookbook}
+\author{Liam Pohlmann}
+\date{\today}
+
+\begin{document}
+\maketitle
+\customtableofcontents
+\input{admin/outline.tex}
+
+\printbibliography[heading=bibintoc,title={References}]
+
+\end{document}
