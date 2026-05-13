@@ -9,32 +9,32 @@
 \makeglossaries
 \include{admin/acronyms}
 \usepackage{xcolor}
-\renewcommand*{\glstextformat}[1]{\textcolor{deepcharcol}{#1}} % disabling the blue color of glossaries
+\renewcommand*{\glstextformat}[1]{\textcolor{color_5}{#1}} % disabling the blue color of glossaries
 
 \DeclareRobustCommand{\degF}{\ensuremath{^{\circ}\mathrm{F}}}
 
 % Set universal colors
-\definecolor{cream}{HTML}{eae5d9}
-\definecolor{rust}{HTML}{631a19}
-\definecolor{darkgreen}{HTML}{404932}
-\definecolor{warmgray}{HTML}{8d9891}
-\definecolor{deepcharcol}{HTML}{2e2727}
+\definecolor{color_1}{HTML}{eae5d9}
+\definecolor{color_2}{HTML}{631a19}
+\definecolor{color_3}{HTML}{404932}
+\definecolor{color_4}{HTML}{8d9891}
+\definecolor{color_5}{HTML}{2e2727}
 
 
 % ── Global page and text color ────────────────────────────────
-\pagecolor{cream}
-\color{deepcharcol}
+\pagecolor{color_1}
+\color{color_5}
 
 % ── xcookybooky recipe colors ─────────────────────────────────
 \setRecipeColors{%
-  recipename    = darkgreen,  % recipe title
-  inghead       = darkgreen,  % "Ingredients" heading
-  prephead      = darkgreen,  % "Preparation" heading
-  suggestionhead = darkgreen, % "Suggestion" heading
-  hinthead      = rust,       % "Hint" heading
-  hintline      = rust,       % hint box border lines
-  numeration    = rust,       % step numbers in preparation
-  separationgraph = warmgray, % the divider graphic
+  recipename    = color_3,  % recipe title
+  inghead       = color_3,  % "Ingredients" heading
+  prephead      = color_3,  % "Preparation" heading
+  suggestionhead = color_3, % "Suggestion" heading
+  hinthead      = color_2,       % "Hint" heading
+  hintline      = color_2,       % hint box border lines
+  numeration    = color_2,       % step numbers in preparation
+  separationgraph = color_4, % the divider graphic
 }
 
 \usepackage{hyperref}    % must be the last package
