@@ -1,0 +1,83 @@
+% ============================================================
+%  Cookbook Title Page
+%  Drop this file into your main document and include it with:
+%    \include{titlepage}   or   \input{titlepage}
+%
+%  Required packages (add to your preamble if not already there):
+%    \usepackage{geometry}
+%    \usepackage{xcolor}
+%    \usepackage{fontenc}      % [T1]
+%    \usepackage{microtype}
+%    \usepackage{graphicx}     % only needed if you add an image
+%    \usepackage{tikz}         % for the decorative rules
+% ============================================================
+
+% Written with the help of ClaudiAI Sonnet 4.6 generative AI.
+
+\begin{titlepage}
+  \centering
+  \vspace*{2.8cm}
+
+  % ── Top ornamental rule ────────────────────────────────────
+  \begin{tikzpicture}
+    \draw[rust, line width=0.6pt] (0,0) -- (10,0);
+    \draw[rust, line width=1.6pt] (0,-0.18) -- (10,-0.18);
+    \draw[rust, line width=0.6pt] (0,-0.36) -- (10,-0.36);
+  \end{tikzpicture}
+
+  \vspace{0.55cm}
+
+  % ── Subtitle / series label ────────────────────────────────
+  {
+    \large\scshape\color{warmgray}
+    A Collection of Liam's Favorite Recipes}
+
+  \vspace{0.8cm}
+
+  % ── Main title ─────────────────────────────────────────────
+  {
+    \Huge\bfseries\color{darkgreen}
+    Pohlmann Family\\[0.25em]
+    \huge\mdseries\itshape\color{rust}
+    Cookbook}
+
+  \vspace{0.7cm}
+
+  % ── Bottom ornamental rule ─────────────────────────────────
+  \begin{tikzpicture}
+    \draw[rust, line width=0.6pt] (0,0) -- (10,0);
+    \draw[rust, line width=1.6pt] (0,-0.18) -- (10,-0.18);
+    \draw[rust, line width=0.6pt] (0,-0.36) -- (10,-0.36);
+  \end{tikzpicture}
+
+  \vspace{2.2cm}
+
+  % ── Optional: swap the \rule for an actual image ───────────
+  % \includegraphics[width=6cm]{your-image-file}
+  %
+  % Placeholder art block (remove if you add an image above)
+  \textcolor{rust!30}{%
+    \begin{tikzpicture}
+      \draw[rust!25, line width=0.8pt, rounded corners=2pt]
+      (0,0) rectangle (6,5);
+      \node[rust!40] at (3,2.5)
+      {\itshape\large [cover image]};
+    \end{tikzpicture}}
+
+  \vspace{2.4cm}
+
+  % ── Author ─────────────────────────────────────────────────
+  {
+    \large\color{warmgray} Compiled by}\\[0.4em]
+  {
+  \Large\bfseries\color{darkgreen} Liam Pohlmann}
+
+  \vfill
+
+  % ── Footer line ────────────────────────────────────────────
+  {
+    \small\color{warmgray} \the\year}
+
+  \vspace{1.2cm}
+
+\end{titlepage}

@@ -9,9 +9,33 @@
 \makeglossaries
 \include{admin/acronyms}
 \usepackage{xcolor}
-\renewcommand*{\glstextformat}[1]{\textcolor{black}{#1}} % disabling the blue color of glossaries
+\renewcommand*{\glstextformat}[1]{\textcolor{deepcharcol}{#1}} % disabling the blue color of glossaries
 
 \DeclareRobustCommand{\degF}{\ensuremath{^{\circ}\mathrm{F}}}
+
+% Set universal colors
+\definecolor{cream}{HTML}{eae5d9}
+\definecolor{rust}{HTML}{631a19}
+\definecolor{darkgreen}{HTML}{404932}
+\definecolor{warmgray}{HTML}{8d9891}
+\definecolor{deepcharcol}{HTML}{2e2727}
+
+
+% ── Global page and text color ────────────────────────────────
+\pagecolor{cream}
+\color{deepcharcol}
+
+% ── xcookybooky recipe colors ─────────────────────────────────
+\setRecipeColors{%
+  recipename    = darkgreen,  % recipe title
+  inghead       = darkgreen,  % "Ingredients" heading
+  prephead      = darkgreen,  % "Preparation" heading
+  suggestionhead = darkgreen, % "Suggestion" heading
+  hinthead      = rust,       % "Hint" heading
+  hintline      = rust,       % hint box border lines
+  numeration    = rust,       % step numbers in preparation
+  separationgraph = warmgray, % the divider graphic
+}
 
 \usepackage{hyperref}    % must be the last package
 \hypersetup{%
@@ -37,12 +61,10 @@
 
 \hbadness=10000	% Ignore underfull boxes
 
-\title{Pohlmann Cookbook}
-\author{Liam Pohlmann}
-\date{\today}
+
 
 \begin{document}
-\maketitle
+\include{admin/titlepage}
 
 \clearpage
 \doclicenseThis
