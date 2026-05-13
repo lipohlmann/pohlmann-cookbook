@@ -24,6 +24,8 @@
 \RequirePackage[nowarnings]{xcookybooky}
 \RequirePackage[hyphens]{url}
 
+\newcommand{\labelTableOfContents}{Table of Contents}
+
 
 % Main body font
 \setmainfont[
@@ -33,14 +35,32 @@
   BoldFont = *-Bold.otf,
   BoldItalicFont = *-BoldIt.otf
 ]{SourceSerif4}
+
 % Decorative/display font
-\newfontfamily\fontseasons{EB Garamond}
+\newfontfamily\fontseasons{TeX Gyre Pagella}
 
 % Light variant for decorative usage
-\newfontfamily\fontseasonslight{Cormorant Garamond Light}
+\newfontfamily\fontseasonslight{TeX Gyre Pagella}
 
 % Sans-serif font
-\newfontfamily\fontpublicsans{Source Sans 3}
+\newfontfamily\fontpublicsans[  Path=./admin/fonts/source-sans-3/,
+  UprightFont = *-Regular.otf,
+  ItalicFont = *-It.otf,
+  BoldFont = *-Bold.otf,
+  BoldItalicFont = *-BoldIt.otf
+]{SourceSans3}
+
+% Format sections to be bigger
+\titleformat{\section}
+{\centering\fontseasons\selectfont}
+{}
+{0pt}
+{\fontsize{32}{38}\selectfont}
+
+\titlespacing*{\section}
+{0pt}
+{1.5cm}
+{0.8cm}
 
 % Custom footer with centered page number
 \pagestyle{fancy}
@@ -65,33 +85,25 @@
 
 
 % Customize appearance of TOC section entries
-\makeatletter
-\renewcommand{\l@section}[2]{%
-  \thispagestyle{empty}
-  \addpenalty{\@secpenalty}%
-  \addvspace{0.5em}%
-  \noindent
-  \begin{center}
-    \begin{tabular*}{0.7\textwidth}{@{\extracolsep{\fill}} l r}
-      {\fontsize{14}{16}\selectfont\fontseasons #1} &
-      {\fontsize{12}{14}\selectfont\fontpublicsans #2}
-    \end{tabular*}
-  \end{center}
-}
-\makeatother
+\renewcommand{\cftsecfont}{\fontseasons\fontsize{14}{22}\selectfont}
+\renewcommand{\cftsecpagefont}{\fontpublicsans\fontsize{12}{16}\selectfont}
+
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+\setlength{\cftbeforesecskip}{0.9em}
 
 % Command to produce the TOC with different margins, no page number on TOC page,
 % then restore margins and reset page numbering
 \newcommand{\customtableofcontents}{%
   \newgeometry{
-    top=2cm,
-    bottom=2cm,
-    left=2cm,
-    right=2cm
+    top=1in,
+    bottom=1in,
+    left=1in,
+    right=1in
   }%
   \pagestyle{empty}% Apply empty style to ALL TOC pages
   \tableofcontents
-  \clearpage
+  % \clearpage
   \pagestyle{fancy}% Restore custom fancy style
   \pagenumbering{arabic}% Restart page numbering from 1
   \restoregeometry

@@ -1,5 +1,7 @@
 \documentclass{admin/recipe_book}
 
+\usepackage[type={CC},modifier={by},version={4.0}]{doclicense}
+
 \usepackage[style=mla,sorting=none]{biblatex}
 \addbibresource{pohlmann-cookbook.bib}
 
@@ -31,6 +33,8 @@
 
 \usepackage[capitalize]{cleveref}
 
+\setcounter{secnumdepth}{0}
+
 \hbadness=10000	% Ignore underfull boxes
 
 \title{Pohlmann Cookbook}
@@ -39,9 +43,14 @@
 
 \begin{document}
 \maketitle
+
+\clearpage
+\doclicenseThis
 \customtableofcontents
+
 \input{admin/outline.tex}
 
+\clearpage
 \printbibliography[heading=bibintoc,title={References}]
 
 \end{document}
