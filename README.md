@@ -7,4 +7,4 @@ Templating and style inspired by:
 3. [Cooking recipe template](https://www.overleaf.com/latex/templates/cooking-recipe-template/zcmdmwpnbctk)
 
 ## Fonts
-- The Source Serif 4 font packages were taken from the [source-serif]https://github.com/adobe-fonts/source-serif/tree/release] repository, and a copy of the license is found (here)[admin/fonts/source-serif-4/LICENSE].
+- The Source Serif 4 font packages were taken from the [source-serif](https://github.com/adobe-fonts/source-serif/tree/release) repository, and a copy of the license is found [here](admin/fonts/source-serif-4/LICENSE).
