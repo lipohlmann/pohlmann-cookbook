@@ -10,7 +10,7 @@
 \RequirePackage{multicol}
 \RequirePackage{enumitem}
 \RequirePackage{xcolor}
-% \RequirePackage{fontspec}
+\RequirePackage{fontspec}
 \RequirePackage[most]{tcolorbox}
 \RequirePackage{tikz}
 \RequirePackage{titlesec}
@@ -24,12 +24,15 @@
 \RequirePackage[nowarnings]{xcookybooky}
 \RequirePackage[hyphens]{url}
 
-\RequirePackage{fontspec}
-% \RequirePackage{sourceserifpro}
 
 % Main body font
-\setmainfont{Source Serif 4}
-
+\setmainfont[
+  Path=./admin/fonts/source-serif-4/,
+  UprightFont = *-Regular.otf,
+  ItalicFont = *-It.otf,
+  BoldFont = *-Bold.otf,
+  BoldItalicFont = *-BoldIt.otf
+]{SourceSerif4}
 % Decorative/display font
 \newfontfamily\fontseasons{EB Garamond}
 

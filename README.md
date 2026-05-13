@@ -8,3 +8,4 @@ Templating and style inspired by:
 
 ## Fonts
 - The Source Serif 4 font packages were taken from the [source-serif](https://github.com/adobe-fonts/source-serif/tree/release) repository, and a copy of the license is found [here](admin/fonts/source-serif-4/LICENSE.md).
+- The Source Sans 3 font packages were taken from the [source-sans](https://github.com/adobe-fonts/source-sans) repository, and a copy of the license is found [here](admin/fonts/source-sans-3/LICENSE.md).
