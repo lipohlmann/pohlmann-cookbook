@@ -37,10 +37,20 @@
 ]{SourceSerif4}
 
 % Decorative/display font
-\newfontfamily\fontseasons{TeX Gyre Pagella}
+\newfontfamily\fontseasons[
+  Path=./admin/fonts/Spectral/,
+  UprightFont = *-Regular.ttf,
+  ItalicFont = *-Italic.ttf,
+  BoldFont = *-Bold.ttf,
+  BoldItalicFont = *-BoldItalic.ttf
+]{Spectral}
 
 % Light variant for decorative usage
-\newfontfamily\fontseasonslight{TeX Gyre Pagella}
+% \newfontfamily\fontseasonslight[
+%   Path=./admin/fonts/Spectral/,
+%   UprightFont = *-Light.ttf,
+%   ItalicFont = *-LightItalic.ttf
+% ]{SpectralLight}
 
 % Sans-serif font
 \newfontfamily\fontpublicsans[  Path=./admin/fonts/source-sans-3/,
