@@ -46,11 +46,12 @@
 ]{Spectral}
 
 % Light variant for decorative usage
-% \newfontfamily\fontseasonslight[
-%   Path=./admin/fonts/Spectral/,
-%   UprightFont = *-Light.ttf,
-%   ItalicFont = *-LightItalic.ttf
-% ]{SpectralLight}
+\newfontfamily\fontseasonslight[
+  Path=./admin/fonts/Spectral/,
+  UprightFont = Spectral-Light.ttf,
+  ItalicFont = Spectral-LightItalic.ttf,
+  BoldFont = Spectral-Light.ttf
+]{SpectralLight}
 
 % Sans-serif font
 \newfontfamily\fontpublicsans[  Path=./admin/fonts/source-sans-3/,
